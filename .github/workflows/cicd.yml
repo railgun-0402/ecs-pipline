@@ -42,7 +42,7 @@ jobs:
 
       - name: Push the image to Amazon ECR
         env:
-          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registory }} # login-ecrの出力結果
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }} # login-ecrの出力結果
         run: |
           docker image tag temp_api_image:latest $ECR_REGISTORY/$ECR_REPOSITORY:${{ github.sha }}
           docker image push $ECR_REGISTORY/$ECR_REPOSITORY:${{ github.sha }}
