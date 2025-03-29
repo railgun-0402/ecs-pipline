@@ -44,5 +44,5 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }} # login-ecrの出力結果
         run: |
-          docker image tag temp_api_image:latest $ECR_REGISTORY/$ECR_REPOSITORY:${{ github.sha }}
-          docker image push $ECR_REGISTORY/$ECR_REPOSITORY:${{ github.sha }}
+          docker image tag temp_api_image:latest $ECR_REGISTRY/$ECR_REPOSITORY:${{ github.sha }}
+          docker image push $ECR_REGISTRY/$ECR_REPOSITORY:${{ github.sha }}
