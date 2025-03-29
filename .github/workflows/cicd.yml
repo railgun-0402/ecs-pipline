@@ -46,7 +46,7 @@ jobs:
         run: |
           docker image tag temp_api_image:latest $ECR_REGISTRY/$ECR_REPOSITORY:${{ github.sha }}
           docker image push $ECR_REGISTRY/$ECR_REPOSITORY:${{ github.sha }}
-          echo $ECR_REGISTRY/$ECR_REPOSITORY:${{ github.sha }} > api-image-uri.txt
+          echo $ECR_REGISTRY/$ECR_REPOSITORY:${{ github.sha }} >> api-image-uri.txt
 
       # artifactを使用して、deploy Jobでタグ名を取得させる
       - name: Upload the image uri file as an artifact
