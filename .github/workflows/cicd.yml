@@ -46,5 +46,3 @@ jobs:
         run: |
           docker image tag temp_api_image:latest $ECR_REGISTORY/$ECR_REPOSITORY:${{ github.sha }}
           docker image push $ECR_REGISTORY/$ECR_REPOSITORY:${{ github.sha }}
-
-  # Deploy
