@@ -50,7 +50,7 @@ jobs:
 
       # artifactを使用して、deploy Jobでタグ名を取得させる
       - name: Upload the image uri file as an artifact
-        uses: actions/upload/artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: api-image-uri # 任意の管理名
           path: cicd-section/api/api-image-uri.txt
